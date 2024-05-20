@@ -5,10 +5,5 @@ permalink: /publication/
 ---
 
 
-
-
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+[Google Scholar] /(https://scholar.google.com/citations?user=STKNO_EAAAAJ&hl=en)
+[INSPIREHEP] /(https://inspirehep.net/authors/2730474?ui-citation-summary=true)
