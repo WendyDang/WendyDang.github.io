@@ -6,8 +6,9 @@ permalink: /publication/
 
 Publications:
 
-[Google Scholar] /[https://scholar.google.com/citations?user=STKNO_EAAAAJ&hl=en]
-[INSPIREHEP] /[https://inspirehep.net/authors/2730474?ui-citation-summary=true]
+[Google Scholar] (https://scholar.google.com/citations?user=STKNO_EAAAAJ&hl=en)
+
+[INSPIREHEP] (https://inspirehep.net/authors/2730474?ui-citation-summary=true)
   
 Yixuan Dang, Ziming Wang, Dicong Liang, & Lijing Shao. (2024). Impact of Overlapping Signals on Parameterized Post-Newtonian Coefficients in Tests of Gravity The Astrophysical Journal, 964(2), 194-. [https://doi.org/10.3847/1538-4357/ad2e00]
 
