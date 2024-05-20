@@ -1,3 +1,5 @@
 theme: minima
 title: Yixuan Dang's homepage
 description: Hello
+header_pages:
+  - about.md
