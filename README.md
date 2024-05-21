@@ -12,6 +12,6 @@ I am currently a 4th year undergraduate-master student studying Physics and Phil
 
 I am interested in Gravity, Astrophysics, Philosophy of Physics and all sorts of reality. 
 
-
+![img](https://github.com/WendyDang.github.io/img.png)
 
 
