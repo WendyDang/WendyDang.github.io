@@ -2,7 +2,7 @@ theme: minima
 title: Yixuan Dang
 description: Hello
 header_pages:
-  - pub.md
+  - about.md
   - CV.md
   - 
 plugins:
