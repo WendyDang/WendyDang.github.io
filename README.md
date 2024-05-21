@@ -1,6 +1,6 @@
 Hi! My name is Yixuan Dang (党伊萱).
 
-Contact: [yixuan.dang@balliol.ox.ac.uk] or [ykd5167@psu.edu]
+Contact: [yixuan.dang@balliol.ox.ac.uk](yixuan.dang@balliol.ox.ac.uk) or [ykd5167@psu.edu](ykd5167@psu.edu)
 
 State College, Pennsylvania, United States (2024-?) PhD student
 
@@ -13,5 +13,6 @@ I am currently a 4th year undergraduate-master student studying Physics and Phil
 I am interested in Gravity, Astrophysics, Philosophy of Physics and all sorts of reality. 
 
 ![img](https://github.com/WendyDang.github.io/img.png)
+<img src="https://github.com/WendyDang.github.io/img.png" style="display: block; margin: auto;" />
 
 
