@@ -23,5 +23,5 @@ On philosophy of thermal physics:
 [Does the melting of ice cubes require a special cosmological hypothesis?](https://wendydang.github.io/Direction_of_Time.pdf)
 
 On philosophy of scientific methods: 
-
+[Bayesianism and Gravitational Waves (also my 4th year thesis)](https://wendydang.github.io/Thesis_Philosophy.pdf)
 
