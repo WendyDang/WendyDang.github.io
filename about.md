@@ -16,6 +16,12 @@ Dang, Y., Cui, C., & Barraza-Alfaro, M. (2024). On corrugation mode radial wavel
 
 Writings:
 
-[Could a gravitational wave knock out the rock of Gibraltar](https://wendydang.github.io/Gravitational_waves .pdf)
+On philosophy of Relativity:
+[Could a gravitational wave knock out the rock of Gibraltar?](https://wendydang.github.io/Gravitational_waves .pdf)
+
+On philosophy of thermal physics:
 [Does the melting of ice cubes require a special cosmological hypothesis?](https://wendydang.github.io/Direction_of_Time.pdf)
+
+On philosophy of scientific methods: 
+
 
