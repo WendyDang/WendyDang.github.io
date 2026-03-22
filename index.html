@@ -46,7 +46,7 @@
     .nav-links a:hover { color: var(--text); text-decoration: none; }
 
     /* ── Layout ── */
-    .container { max-width: 760px; margin: 0 auto; padding: 0 6%; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 6%; }
     section { padding: 5rem 0 3.5rem; border-top: 1px solid var(--border); }
     #about { padding-top: calc(var(--nav-h) + 4rem); border-top: none; }
 
@@ -54,24 +54,24 @@
          color: var(--muted); margin-bottom: 2.5rem; }
 
     /* ── About ── */
-    .about-grid { display: grid; grid-template-columns: 150px 1fr; gap: 3rem; align-items: start; }
+    .about-grid { display: grid; grid-template-columns: 200px 1fr; gap: 3.5rem; align-items: start; }
     .about-photo {
-      width: 130px; height: 130px; border-radius: 50%;
+      width: 180px; height: 180px; border-radius: 50%;
       object-fit: cover; display: block;
       border: 1px solid var(--border);
     }
     .about-photo-placeholder {
-      width: 130px; height: 130px; border-radius: 50%;
+      width: 180px; height: 180px; border-radius: 50%;
       background: var(--blue-light); border: 1px solid var(--border);
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.4rem; font-weight: 400; color: var(--blue);
+      font-size: 1.8rem; font-weight: 400; color: var(--blue);
       letter-spacing: 0.05em;
     }
-    .about-name { font-size: 1.5rem; font-weight: 400; margin-bottom: 0.15rem; letter-spacing: -0.01em; }
-    .about-chinese { font-size: 0.9rem; color: var(--muted); margin-bottom: 1.1rem; }
-    .about-content p { color: var(--muted); margin-bottom: 0.85rem; font-size: 0.95rem; }
-    .info-list { list-style: none; margin-top: 1.2rem; display: flex; flex-direction: column; gap: 0.45rem; }
-    .info-list li { font-size: 0.88rem; color: var(--muted); }
+    .about-name { font-size: 1.9rem; font-weight: 400; margin-bottom: 0.2rem; letter-spacing: -0.02em; }
+    .about-chinese { font-size: 1rem; color: var(--muted); margin-bottom: 1.2rem; }
+    .about-content p { color: var(--muted); margin-bottom: 0.9rem; font-size: 1.05rem; }
+    .info-list { list-style: none; margin-top: 1.4rem; display: flex; flex-direction: column; gap: 0.55rem; }
+    .info-list li { font-size: 1rem; color: var(--muted); }
     .info-list li a { color: var(--muted); }
     .info-list li a:hover { color: var(--blue); }
 
@@ -113,8 +113,9 @@
     }
 
     /* ── Mobile ── */
-    @media (max-width: 620px) {
-      .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (max-width: 680px) {
+      .about-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+      .about-photo, .about-photo-placeholder { width: 140px; height: 140px; }
       .pub-item { grid-template-columns: 40px 1fr; gap: 0 1rem; }
       .nav-links { gap: 1.2rem; }
     }
