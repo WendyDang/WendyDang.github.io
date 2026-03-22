@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yixuan Dang | PhD Student, Penn State</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:        #ffffff;
+      --blue:      #2563eb;
+      --blue-light:#eff6ff;
+      --text:      #18181b;
+      --muted:     #71717a;
+      --border:    #e4e4e7;
+      --nav-h:     56px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 300;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: var(--nav-h);
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 6%;
+    }
+    .nav-logo { font-weight: 400; font-size: 0.95rem; color: var(--text); letter-spacing: 0.01em; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a { font-size: 0.85rem; font-weight: 300; color: var(--muted); transition: color 0.15s; }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+    /* ── Layout ── */
+    .container { max-width: 760px; margin: 0 auto; padding: 0 6%; }
+    section { padding: 5rem 0 3.5rem; border-top: 1px solid var(--border); }
+    #about { padding-top: calc(var(--nav-h) + 4rem); border-top: none; }
+
+    h2 { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+         color: var(--muted); margin-bottom: 2.5rem; }
+
+    /* ── About ── */
+    .about-grid { display: grid; grid-template-columns: 150px 1fr; gap: 3rem; align-items: start; }
+    .about-photo {
+      width: 130px; height: 130px; border-radius: 50%;
+      object-fit: cover; display: block;
+      border: 1px solid var(--border);
+    }
+    .about-photo-placeholder {
+      width: 130px; height: 130px; border-radius: 50%;
+      background: var(--blue-light); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; font-weight: 400; color: var(--blue);
+      letter-spacing: 0.05em;
+    }
+    .about-name { font-size: 1.5rem; font-weight: 400; margin-bottom: 0.15rem; letter-spacing: -0.01em; }
+    .about-chinese { font-size: 0.9rem; color: var(--muted); margin-bottom: 1.1rem; }
+    .about-content p { color: var(--muted); margin-bottom: 0.85rem; font-size: 0.95rem; }
+    .info-list { list-style: none; margin-top: 1.2rem; display: flex; flex-direction: column; gap: 0.45rem; }
+    .info-list li { font-size: 0.88rem; color: var(--muted); }
+    .info-list li a { color: var(--muted); }
+    .info-list li a:hover { color: var(--blue); }
+
+    /* ── Publications ── */
+    .pub-group-title {
+      font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted);
+      margin: 0 0 1.5rem;
+    }
+    .pub-group-title:not(:first-child) { margin-top: 3rem; }
+    .profile-links { display: flex; gap: 1.2rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+    .profile-links a { font-size: 0.85rem; color: var(--muted); }
+    .profile-links a:hover { color: var(--blue); }
+    .pub-list { display: flex; flex-direction: column; }
+    .pub-item {
+      display: grid; grid-template-columns: 52px 1fr;
+      gap: 0 1.5rem;
+      padding: 1.4rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .pub-item:first-child { border-top: 1px solid var(--border); }
+    .pub-year-col { font-size: 0.8rem; color: var(--muted); font-weight: 300; padding-top: 2px; }
+    .pub-body h3 {
+      font-size: 0.95rem; font-weight: 400; line-height: 1.5;
+      margin-bottom: 0.3rem; color: var(--text);
+    }
+    .pub-body .authors { font-size: 0.83rem; color: var(--muted); margin-bottom: 0.25rem; }
+    .pub-body .authors strong { font-weight: 500; color: var(--text); }
+    .pub-body .venue { font-size: 0.82rem; color: var(--muted); font-style: italic; margin-bottom: 0.5rem; }
+    .pub-links { display: flex; gap: 1rem; }
+    .pub-links a { font-size: 0.78rem; color: var(--blue); font-weight: 400; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center; padding: 2.5rem 6%;
+      font-size: 0.78rem; color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-weight: 300;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 620px) {
+      .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .pub-item { grid-template-columns: 40px 1fr; gap: 0 1rem; }
+      .nav-links { gap: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">Yixuan Dang</span>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- About -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <img src="img.png" alt="Yixuan Dang" class="about-photo"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="about-photo-placeholder" style="display:none;">YD</div>
+      </div>
+      <div class="about-content">
+        <p class="about-name">Yixuan (Wendy) Dang</p>
+        <p class="about-chinese">党伊萱</p>
+        <p>
+          Hi! This is Wendy. I am a PhD student exploring gravitational-wave cosmology at
+          Penn State. I am curious about gravity, astrophysics, philosophy of physics, and
+          also other random questions about reality.
+        </p>
+        <p>
+          Originally made in Hangzhou (杭州), China, the most beautiful city in the world!
+        </p>
+        <ul class="info-list">
+          <li>PhD · Penn State University (2024–ongoing)</li>
+          <li>MPhysPhil · University of Oxford (2020–2024)</li>
+          <li><a href="mailto:ykd5167@psu.edu">ykd5167@psu.edu</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Publications -->
+<section id="publications">
+  <div class="container">
+    <h2>Publications &amp; Writings</h2>
+
+    <div class="profile-links">
+      <a href="https://scholar.google.com/citations?user=STKNO_EAAAAJ&hl=en" target="_blank">Google Scholar ↗</a>
+      <a href="https://inspirehep.net/authors/2730474?ui-citation-summary=true" target="_blank">INSPIRE HEP ↗</a>
+    </div>
+
+    <p class="pub-group-title">Journal Articles</p>
+    <div class="pub-list">
+
+      <!-- NEW PUBLICATION — fill in details when available -->
+      <div class="pub-item">
+        <span class="pub-year-col">2025</span>
+        <div class="pub-body">
+          <h3>Golden and Silver Dark Sirens for precise H0 measurement with HETDEX</h3>
+          <p class="authors"><strong>Yixuan Dang</strong>, Ish Gupta, Robin Ciardullo et al.</p>
+          <p class="venue">arxiv</p>
+          <div class="pub-links">
+            <a href="https://arxiv.org/pdf/2512.21729" target="_blank">arXiv ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-year-col">2024</span>
+        <div class="pub-body">
+          <h3>Impact of Overlapping Signals on Parameterized Post-Newtonian Coefficients in Tests of Gravity</h3>
+          <p class="authors"><strong>Yixuan Dang</strong>, Ziming Wang, Dicong Liang &amp; Lijing Shao</p>
+          <p class="venue">The Astrophysical Journal, 964(2), 194</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.3847/1538-4357/ad2e00" target="_blank">DOI ↗</a>
+            <a href="https://inspirehep.net/authors/2730474" target="_blank">INSPIRE ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-year-col">2024</span>
+        <div class="pub-body">
+          <h3>On corrugation mode radial wavelengths of the vertical shear instability</h3>
+          <p class="authors"><strong>Yixuan Dang</strong>, C. Cui &amp; M. Barraza-Alfaro</p>
+          <p class="venue">Monthly Notices of the Royal Astronomical Society, 529(2), 918–925</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1093/mnras/stae619" target="_blank">DOI ↗</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="pub-group-title">Random thoughts!</p>
+    <div class="pub-list">
+
+      <div class="pub-item">
+        <span class="pub-year-col">Essay</span>
+        <div class="pub-body">
+          <h3>Could a gravitational wave knock out the rock of Gibraltar?</h3>
+          <div class="pub-links">
+            <a href="Gravitational_waves .pdf">PDF ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-year-col">Essay</span>
+        <div class="pub-body">
+          <h3>Does the melting of ice cubes require a special cosmological hypothesis?</h3>
+          <div class="pub-links">
+            <a href="Direction_of_Time.pdf">PDF ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-year-col">Thesis</span>
+        <div class="pub-body">
+          <h3>Bayesianism and Gravitational Waves</h3>
+          <div class="pub-links">
+            <a href="Thesis_Philosophy.pdf">PDF ↗</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <p style="color: var(--muted); font-size: 0.95rem;">
+      Feel free to reach out at <a href="mailto:ykd5167@psu.edu">ykd5167@psu.edu</a>
+      or <a href="mailto:yixuan.dang@balliol.ox.ac.uk">yixuan.dang@balliol.ox.ac.uk</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Yixuan Dang · State College, PA
+</footer>
+
+</body>
+</html>
